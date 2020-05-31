@@ -1,31 +1,21 @@
 package com.deepblue.spring_study_001_bean;
 
-import com.alibaba.fastjson.JSON;
-import com.deep.blue.spring_study_001_bean.spring_001_entity.NormalXMLBean;
-import com.deep.blue.spring_study_001_bean.spring_002_meta.MetaXMLBean;
-import com.deep.blue.spring_study_001_bean.spring_003_lookup.LookupMethodBean;
-import com.deep.blue.spring_study_001_bean.spring_004_replaced.ReplacedMethodBean;
-import com.deep.blue.spring_study_001_bean.spring_005_constructs.ConstructXMLBean;
-import com.deep.blue.spring_study_001_bean.spring_006_property.PropertyXMLBean;
-import com.deep.blue.spring_study_001_bean.spring_007_qualifier.QualifierXMLBean;
-import org.junit.Test;
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
-import org.springframework.core.io.ClassPathResource;
 
-public class XMLBeanFactoryTest {
+import com.deepblue.spring_study_001_bean.spring_001_entity.NormalXMLBean;
+import com.interface21.beans.factory.BeanFactory;
+import com.interface21.beans.factory.xml.XmlBeanFactory;
 
-    @Test
+public class BeanFactoryTest {
+
     public void testXmlBeanFactory() {
 
         //1.一般的XMLBean
-        BeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("study_001_bean.xml"));
+        BeanFactory beanFactory = new XmlBeanFactory("study_001_bean.xml");
         NormalXMLBean normalXMLBean = (NormalXMLBean) beanFactory.getBean("normalXMLBean");
         System.out.println(normalXMLBean.getName());
 
         System.out.println("---------------------------------------------------------------------");
-
+        /*
         //2.这里是获取 meta 元数据的使用
         MetaXMLBean metaXMLBean = (MetaXMLBean) beanFactory.getBean("metaXMLBean");
         BeanDefinition beanDefinition = ((XmlBeanFactory)beanFactory).getBeanDefinition("metaXMLBean");
@@ -62,5 +52,11 @@ public class XMLBeanFactoryTest {
         //7. qualifier 的使用
         QualifierXMLBean qualifierXMLBean = (QualifierXMLBean) beanFactory.getBean("qualifierXMLBean");
         System.out.println(JSON.toJSONString(qualifierXMLBean));
+        */
+    }
+
+    public static void main(String[] args) {
+        BeanFactoryTest test = new BeanFactoryTest();
+        test.testXmlBeanFactory();
     }
 }
