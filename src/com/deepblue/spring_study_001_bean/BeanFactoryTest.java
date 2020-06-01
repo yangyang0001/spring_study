@@ -10,7 +10,7 @@ public class BeanFactoryTest {
     public void testXmlBeanFactory() {
 
         //1.一般的XMLBean
-        BeanFactory beanFactory = new XmlBeanFactory("study_001_bean.xml");
+        BeanFactory beanFactory = new XmlBeanFactory("D:\\study_workspace\\spring_study\\src\\com\\deepblue\\spring_study_001_bean\\spring_001_entity\\study_001_bean.xml");
         NormalXMLBean normalXMLBean = (NormalXMLBean) beanFactory.getBean("normalXMLBean");
         System.out.println(normalXMLBean.getName());
 
