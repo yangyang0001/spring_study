@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">-->
+<!DOCTYPE beans SYSTEM "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <!-- 1.查看spring源码中的加载Alias 属性的过程 -->
+    <bean id="xmlAliasBean" class="com.deep.blue.spring_study_002_alias.spring_001_entity.XMLAliasBean"/>
+    <alias name="xmlAliasBean" alias="alias1"/>
+    <alias name="xmlAliasBean" alias="alias2"/>
+    <alias name="xmlAliasBean" alias="alias3"/>
+
+
+</beans>

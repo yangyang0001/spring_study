@@ -1,16 +1,20 @@
 package com.deepblue.spring_study_001_bean;
 
 
+import com.deepblue.spring_common.CommonConstant;
 import com.deepblue.spring_study_001_bean.spring_001_entity.NormalXMLBean;
 import com.interface21.beans.factory.BeanFactory;
 import com.interface21.beans.factory.xml.XmlBeanFactory;
 
 public class BeanFactoryTest {
 
+
+
     public void testXmlBeanFactory() {
 
+
         //1.一般的XMLBean
-        BeanFactory beanFactory = new XmlBeanFactory("study_001_bean.xml");
+        BeanFactory beanFactory = new XmlBeanFactory(CommonConstant.FILE_BASE_PATH + "/src/com/deepblue/spring_study_001_bean/study_001_bean.xml");
         NormalXMLBean normalXMLBean = (NormalXMLBean) beanFactory.getBean("normalXMLBean");
         System.out.println(normalXMLBean.getName());
 

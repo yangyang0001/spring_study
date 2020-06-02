@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">-->
+<!DOCTYPE beans SYSTEM "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+
+    <!-- 1.查看spring源码中的加载Bean配置的过程 -->
+    <bean id="normalXMLBean" class="com.deepblue.spring_study_001_bean.spring_001_entity.NormalXMLBean"></bean>
+
+    <!--
+    &lt;!&ndash; 2.meta子元素的解析 &ndash;&gt;
+    <bean id="metaXMLBean" class="com.deep.blue.spring_study_001_bean.spring_002_meta.MetaXMLBean">
+        <meta key="metaKey" value="metaValue"/>
+    </bean>
+
+    &lt;!&ndash; 3.lookup 子元素的使用 &ndash;&gt;
+    <bean id="lookupMethodBean" class="com.deep.blue.spring_study_001_bean.spring_003_lookup.LookupMethodBean">
+        <lookup-method name="getUserBean" bean="student"></lookup-method>
+    </bean>
+    <bean id="teacher" class="com.deep.blue.spring_study_001_bean.spring_003_lookup.Teacher"></bean>
+    <bean id="student" class="com.deep.blue.spring_study_001_bean.spring_003_lookup.Student"></bean>
+
+    &lt;!&ndash; 4.replaced 子元素的使用 &ndash;&gt;
+    <bean id="replacedMethodBean" class="com.deep.blue.spring_study_001_bean.spring_004_replaced.ReplacedMethodBean">
+        <replaced-method name="replace" replacer="myRepalceMethodBean"></replaced-method>
+    </bean>
+    <bean id="myRepalceMethodBean" class="com.deep.blue.spring_study_001_bean.spring_004_replaced.MyRepalceMethodBean"></bean>
+
+    &lt;!&ndash; 5.构造方法 子元素的使用 &ndash;&gt;
+    <bean id="constructXMLBean" class="com.deep.blue.spring_study_001_bean.spring_005_constructs.ConstructXMLBean">
+        <constructor-arg name="username" type="java.lang.String" index="0">
+            <value>张三</value>
+        </constructor-arg>
+        <constructor-arg name="password" type="java.lang.String" index="1">
+            <value>123456</value>
+        </constructor-arg>
+    </bean>
+
+    &lt;!&ndash; 6. property 属性的解析 &ndash;&gt;
+    <bean id="propertyXMLBean" class="com.deep.blue.spring_study_001_bean.spring_006_property.PropertyXMLBean">
+        <property name="username" value="张三"/>
+        <property name="age" value="30"/>
+        <property name="isChinese" value="true"/>
+        <property name="hobbies">
+            <array>
+                <value>足球</value>
+                <value>篮球</value>
+                <value>排球</value>
+            </array>
+        </property>
+        <property name="parents">
+            <list>
+                <value>父亲</value>
+                <value>母亲</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="qualifierXMLBean" class="com.deep.blue.spring_study_001_bean.spring_007_qualifier.QualifierXMLBean">
+        <qualifier type="org.springframework.beans.factory.annotation.Qualifier" value="qf"/>
+    </bean>
+    -->
+
+
+
+</beans>
